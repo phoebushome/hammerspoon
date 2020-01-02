@@ -3,8 +3,8 @@ local caffeinate = require "hs.caffeinate"
 local audiodevice = require "hs.audiodevice"
 
 hotkey.bind(hyper, "L", function()
-  caffeinate.lockScreen()
-  -- caffeinate.startScreensaver()
+  -- caffeinate.lockScreen()
+  caffeinate.startScreensaver()
 end)
 
 -- mute on sleep

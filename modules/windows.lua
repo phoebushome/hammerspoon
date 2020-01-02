@@ -38,6 +38,7 @@ hotkey.bind(hyper, "Down", function()
   window.focusedWindow():moveToUnit'[0,50,100,100]'
 end)
 
+--[[
 -- left top quarter
 hotkey.bind(hyperAlt, "Left", function()
   window.focusedWindow():moveToUnit'[0,0,50,50]'
@@ -57,16 +58,19 @@ end)
 hotkey.bind(hyperAlt, "Down", function()
   window.focusedWindow():moveToUnit'[0,50,50,100]'
 end)
+--]]
 
 -- full screen
 hotkey.bind(hyper, 'F', function() 
   window.focusedWindow():toggleFullScreen()
 end)
 
+--[[
 -- center window
 hotkey.bind(hyper, 'C', function() 
   window.focusedWindow():centerOnScreen()
 end)
+--]]
 
 -- maximize window
 hotkey.bind(hyper, 'M', function() toggle_maximize() end)
@@ -138,6 +142,7 @@ function focusScreen(screen)
   mouse.setAbsolutePosition(pt)
 end
 
+--[[
 -- maximized active window and move to selected monitor
 moveto = function(win, n)
   local screens = screen.allScreens()
@@ -167,3 +172,4 @@ hotkey.bind(hyperShift, "3", function()
   local win = window.focusedWindow()
   moveto(win, 3)
 end)
+--]]
